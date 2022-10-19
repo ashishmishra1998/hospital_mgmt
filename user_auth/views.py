@@ -55,6 +55,10 @@ class UserProfileView(APIView):
         serializer = UserProfileSerializer(request.user)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
+# class eventdetails(APIView):
+#     def post(self, request, format = None):
+#         pass
+
 class MapDetails(APIView):
     def get(self, request, format = None):
 
