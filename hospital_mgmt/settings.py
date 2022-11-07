@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     'channels',
     'user_auth',
+    'hospital',
     'rest_framework',
     "corsheaders",
     'django.contrib.admin',
