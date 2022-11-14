@@ -16,7 +16,7 @@ from .consumers import NotificationConsumer
 
 # Create your views here.
 
-context = {}
+
 
 
 class MapDetails(APIView):
@@ -52,7 +52,7 @@ class Notification(APIView):
     def post(self, request, format=None):
         #  serializer = NotificationSerializer(data=request.data)
         if request.data:
-            return Response({"Message":"Notification Sent!"})
+            return Response({"Message":"Notification Sent!", "data" : request.data})
         return Response({"Message":"Notification Not Sent!"})
 
 
@@ -82,3 +82,19 @@ def send(data):
             'message':data
         })
     return HttpResponse("sent")
+
+class addMap(APIView):
+    permission_classes = [IsAuthenticated]
+    def post(self,request, format = None):
+        global mapdata
+        mapdata = request.data
+        if request.data:
+            return Response({"Message":"Map Details Saved!"})
+        return Response({"Message":"Maps detials not saved"})
+    
+    def get(self, request, format = None):
+        return Response({'map':mapdata})
+
+
+
+
