@@ -83,12 +83,22 @@ ASGI_APPLICATION = "hospital_mgmt.asgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'postgres://plgfhmkv:7bl8t6V1qFJpG9UENz_6WC2Re-xXAcn9@peanut.db.elephantsql.com/plgfhmkv',
+#         'NAME':'peanut.db.elephantsql.com',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'plgfhmkv',
+    'USER':'plgfhmkv',
+    'PASSWORD':'7bl8t6V1qFJpG9UENz_6WC2Re-xXAcn9', 
+    'HOST':'peanut.db.elephantsql.com',
+    'PORT': 5432
+    }}
 
 AUTH_USER_MODEL = 'user_auth.User_data'
 
