@@ -29,3 +29,4 @@ txaio==22.2.1
 typing_extensions==4.4.0
 tzdata==2022.5
 zope.interface==5.5.1
+gunicorn
