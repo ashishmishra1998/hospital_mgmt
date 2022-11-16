@@ -3,6 +3,7 @@ from urllib import response
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
+from rest_framework.generics import CreateAPIView,UpdateAPIView,ListAPIView,RetrieveUpdateDestroyAPIView,RetrieveAPIView
 from hospital.serializers import *
 from django.contrib.auth import authenticate
 from rest_framework_simplejwt.tokens import RefreshToken
@@ -94,6 +95,114 @@ class addMap(APIView):
     
     def get(self, request, format = None):
         return Response({'map':mapdata})
+
+
+class addHospital(CreateAPIView):
+    serializer_class = AddHospital
+    permission_classes = [IsAuthenticated]
+    def perform_create(self, serializer):
+        obj = serializer.save()
+        obj.created_by = self.request.user
+        obj.save()
+    
+class allHospital(ListAPIView):
+    serializer_class = AddHospital
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        return HospitalData.objects.all()
+    
+class accessSingleHospital(RetrieveUpdateDestroyAPIView):
+    serializer_class = AddHospital
+    permission_classes = [IsAuthenticated]
+
+    lookup_field ='pk'
+    def get_queryset(self):
+        return HospitalData.objects.filter(id =  int(self.kwargs['pk']))
+
+class addFloor(CreateAPIView):
+    serializer_class = AddFloor
+    permission_classes = [IsAuthenticated]
+    def perform_create(self, serializer):
+        obj = serializer.save()
+        obj.created_by = self.request.user
+        obj.save()
+    
+class allHospitalFloors(ListAPIView):
+    serializer_class = AddFloor
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        return FloorData.objects.all()
+
+class accessSingleHospitalFloors(RetrieveUpdateDestroyAPIView):
+    serializer_class = AddFloor
+    permission_classes = [IsAuthenticated]
+
+    lookup_field ='pk'
+    def get_queryset(self):
+        return FloorData.objects.filter(id =  int(self.kwargs['pk']))
+
+class addWard(CreateAPIView):
+    serializer_class = AddWard
+    permission_classes = [IsAuthenticated]
+    def perform_create(self, serializer):
+        obj = serializer.save()
+        obj.created_by = self.request.user
+        obj.save()
+
+class allHospitalWards(ListAPIView):
+    serializer_class = AddWard
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        return WardData.objects.all()
+
+class accessSingleHospitalWards(RetrieveUpdateDestroyAPIView):
+    serializer_class = AddWard
+    permission_classes = [IsAuthenticated]
+
+    lookup_field ='pk'
+    def get_queryset(self):
+        return WardData.objects.filter(id =  int(self.kwargs['pk']))
+
+
+class addBed(CreateAPIView):
+    serializer_class = AddBed
+    permission_classes = [IsAuthenticated]
+    def perform_create(self, serializer):
+        obj = serializer.save()
+        obj.created_by = self.request.user
+        obj.save()
+
+class allHospitalBeds(ListAPIView):
+    serializer_class = AddBed
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        return BedData.objects.all()
+
+class accessSingleHospitalBeds(RetrieveUpdateDestroyAPIView):
+    serializer_class = AddBed
+    permission_classes = [IsAuthenticated]
+
+    lookup_field ='pk'
+    def get_queryset(self):
+        return BedData.objects.filter(id =  int(self.kwargs['pk']))
+
+
+
+class hospitalDetails(RetrieveAPIView):
+    serializer_class = HospitalDetails
+    permission_classes = [IsAuthenticated]
+
+    lookup_field ='pk'
+    def get_queryset(self):
+        return HospitalData.objects.filter(id =  int(self.kwargs['pk']))
+
+
+
+    
 
 
 
