@@ -1,0 +1,705 @@
+Watching for file changes with StatReloader
+Not Found: /
+HTTP GET / 404 [0.01, 163.53.177.63:58094]
+Bad Request: /api/user/register/
+HTTP POST /api/user/register/ 400 [1.53, 163.53.177.63:52578]
+HTTP POST /api/user/login/ 200 [1.78, 163.53.177.63:52578]
+Internal Server Error: /api/hospital/addMap/
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/asgiref/sync.py", line 472, in thread_handler
+    raise exc_info[1]
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/asgiref/sync.py", line 435, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 455, in wait_for
+    return await fut
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/asgiref/sync.py", line 476, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/hospital/views.py", line 97, in get
+    return Response({'map':mapdata})
+NameError: name 'mapdata' is not defined
+HTTP GET /api/hospital/addMap/ 500 [1.56, 163.53.177.63:52578]
+HTTP POST /api/user/register/ 201 [2.02, 163.53.177.63:52578]
+HTTP POST /api/user/login/ 200 [1.80, 163.53.177.63:52578]
+HTTP GET /api/user/userprofile/ 200 [1.53, 163.53.177.63:52578]
+Not Found: /
+HTTP GET / 404 [0.01, 163.53.177.63:58511]
+Not Found: /
+HTTP GET / 404 [0.01, 198.235.24.17:64960]
+WebSocket HANDSHAKING /ws/socket-server [103.249.233.156:25575]
+Exception inside application: No route found for path 'ws/socket-server'.
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 168, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'ws/socket-server'.
+WebSocket DISCONNECT /ws/socket-server [103.249.233.156:25575]
+WebSocket HANDSHAKING /ws/socket-server [103.249.233.156:25800]
+Exception inside application: No route found for path 'ws/socket-server'.
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 168, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'ws/socket-server'.
+WebSocket DISCONNECT /ws/socket-server [103.249.233.156:25800]
+Bad Request: /api/user/register/
+HTTP POST /api/user/register/ 400 [1.57, 103.249.233.156:25758]
+HTTP POST /api/user/login/ 200 [1.78, 103.249.233.156:25758]
+HTTP GET /api/user/userprofile/ 200 [1.52, 103.249.233.156:25758]
+Bad Request: /api/user/register/
+HTTP POST /api/user/register/ 400 [1.51, 103.249.233.156:25758]
+HTTP POST /api/user/login/ 200 [1.78, 103.249.233.156:25758]
+HTTP GET /api/user/userprofile/ 200 [1.53, 103.249.233.156:25758]
+WebSocket HANDSHAKING /ws/socket-server [103.249.233.156:25914]
+Exception inside application: No route found for path 'ws/socket-server'.
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 168, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'ws/socket-server'.
+WebSocket DISCONNECT /ws/socket-server [103.249.233.156:25914]
+HTTP POST /api/hospital/addMap/ 200 [1.60, 103.249.233.156:25931]
+HTTP GET /api/hospital/addMap/ 200 [1.51, 103.249.233.156:25931]
+HTTP GET /api/hospital/addMap/ 200 [1.51, 103.249.233.156:25931]
+HTTP GET /api/hospital/addMap/ 200 [1.53, 103.249.233.156:25931]
+HTTP GET /api/hospital/addMap/ 200 [1.49, 103.249.233.156:25931]
+HTTP GET /api/hospital/addMap/ 200 [1.51, 103.249.233.156:25931]
+HTTP GET /api/hospital/addMap/ 200 [1.51, 103.249.233.156:25931]
+HTTP GET /api/hospital/addMap/ 200 [1.54, 103.249.233.156:25931]
+HTTP GET /api/hospital/addMap/ 200 [1.49, 103.249.233.156:25931]
+HTTP GET /api/hospital/addMap/ 200 [1.49, 103.249.233.156:25931]
+HTTP GET /api/hospital/addMap/ 200 [1.68, 103.249.233.156:25931]
+HTTP GET /api/hospital/addMap/ 200 [1.57, 103.249.233.156:25931]
+Not Found: /
+HTTP GET / 404 [0.01, 94.102.61.48:41788]
+HTTP POST /api/user/login/ 200 [1.86, 163.53.177.63:54901]
+HTTP GET /api/hospital/addMap/ 200 [1.53, 163.53.177.63:54901]
+HTTP GET /api/hospital/addMap/ 200 [1.55, 163.53.177.63:55967]
+Unauthorized: /api/hospital/addMap/
+HTTP POST /api/hospital/addMap/ 401 [0.01, 163.53.177.63:55967]
+HTTP POST /api/hospital/addMap/ 200 [1.51, 163.53.177.63:55967]
+HTTP GET /api/hospital/addMap/ 200 [1.52, 163.53.177.63:55967]
+HTTP POST /api/hospital/addMap/ 200 [1.49, 163.53.177.63:55967]
+HTTP GET /api/hospital/addMap/ 200 [1.49, 163.53.177.63:55967]
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 22, 2022 - 09:38:39
+Django version 4.1.2, using settings 'hospital_mgmt.settings'
+Starting ASGI/Channels version 3.0.4 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Not Found: /
+HTTP GET / 404 [0.01, 163.53.177.63:57456]
+Not Found: /favicon.ico
+HTTP GET /favicon.ico 404 [0.01, 163.53.177.63:57456]
+Not Found: /
+HTTP GET / 404 [0.01, 163.53.177.63:61049]
+Not Found: /
+HTTP GET / 404 [0.01, 163.53.177.63:61049]
+Not Found: /
+HTTP GET / 404 [0.01, 163.53.177.63:63788]
+WebSocket HANDSHAKING /ws/socket-server/ [163.53.177.63:59693]
+WebSocket CONNECT /ws/socket-server/ [163.53.177.63:59693]
+HTTP POST /api/user/register/ 201 [2.28, 163.53.177.63:49596]
+Bad Request: /api/user/register/
+HTTP POST /api/user/register/ 400 [1.68, 163.53.177.63:49596]
+HTTP POST /api/user/login/ 200 [1.97, 163.53.177.63:49596]
+HTTP POST /api/hospital/testSocket/ 200 [1.51, 163.53.177.63:49596]
+Internal Server Error: /api/hospital/testSocket/
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/asgiref/sync.py", line 472, in thread_handler
+    raise exc_info[1]
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/asgiref/sync.py", line 435, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 455, in wait_for
+    return await fut
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/asgiref/sync.py", line 476, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/hospital/views.py", line 67, in post
+    context = {"name" :  request.data['name'], "mobile_no" :request.data['mobile_no']}
+KeyError: 'name'
+HTTP POST /api/hospital/testSocket/ 500 [1.53, 163.53.177.63:51502]
+HTTP POST /api/user/login/ 200 [1.95, 163.53.177.63:51502]
+HTTP POST /api/hospital/testSocket/ 200 [1.50, 163.53.177.63:51502]
+HTTP POST /api/user/login/ 200 [1.92, 163.53.177.63:60784]
+HTTP POST /api/hospital/testSocket/ 200 [1.51, 163.53.177.63:60784]
+WebSocket HANDSHAKING /ws/socket-server/ [163.53.177.63:62474]
+WebSocket CONNECT /ws/socket-server/ [163.53.177.63:62474]
+HTTP POST /api/hospital/testSocket/ 200 [1.52, 163.53.177.63:62582]
+WebSocket DISCONNECT /ws/socket-server/ [163.53.177.63:62474]
+Not Found: /
+HTTP GET / 404 [0.01, 167.248.133.119:40632]
+Not Found: /
+HTTP GET / 404 [0.01, 167.248.133.119:49236]
+Not Found: *
+HTTP PRI * 404 [0.01, 167.248.133.119:60274]
+WebSocket HANDSHAKING /ws/socket-server/ [163.53.177.63:50434]
+WebSocket CONNECT /ws/socket-server/ [163.53.177.63:50434]
+HTTP POST /api/user/login/ 200 [1.86, 163.53.177.63:60471]
+HTTP POST /api/hospital/testSocket/ 200 [1.52, 163.53.177.63:60471]
+HTTP POST /api/hospital/testSocket/ 200 [1.60, 163.53.177.63:60471]
+WebSocket DISCONNECT /ws/socket-server/ [163.53.177.63:50434]
+HTTP POST /api/user/login/ 200 [1.94, 103.249.233.79:21857]
+HTTP GET /api/user/userprofile/ 200 [1.49, 103.249.233.79:21857]
+HTTP GET /api/hospital/mapdetails/ 200 [1.50, 103.249.233.79:21857]
+HTTP POST /api/hospital/notification/ 200 [1.51, 103.249.233.79:21857]
+WebSocket HANDSHAKING /ws/socket-server [103.249.233.79:21774]
+Exception inside application: No route found for path 'ws/socket-server'.
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 168, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'ws/socket-server'.
+WebSocket DISCONNECT /ws/socket-server [103.249.233.79:21774]
+Unauthorized: /api/hospital/addMap/
+HTTP GET /api/hospital/addMap/ 401 [0.01, 103.249.233.79:21748]
+Unauthorized: /api/hospital/addMap/
+HTTP POST /api/hospital/addMap/ 401 [0.01, 103.249.233.79:21748]
+Unauthorized: /api/hospital/addMap/
+HTTP GET /api/hospital/addMap/ 401 [0.01, 103.249.233.79:21748]
+HTTP POST /api/user/login/ 200 [1.87, 103.249.233.79:21748]
+Internal Server Error: /api/hospital/addMap/
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/asgiref/sync.py", line 472, in thread_handler
+    raise exc_info[1]
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/asgiref/sync.py", line 435, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 455, in wait_for
+    return await fut
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/asgiref/sync.py", line 476, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/hospital/views.py", line 97, in get
+    return Response({'map':mapdata})
+NameError: name 'mapdata' is not defined
+HTTP GET /api/hospital/addMap/ 500 [1.56, 103.249.233.79:21748]
+HTTP POST /api/hospital/addMap/ 200 [1.49, 103.249.233.79:21748]
+HTTP GET /api/hospital/addMap/ 200 [1.51, 103.249.233.79:21748]
+HTTP POST /api/user/login/ 200 [1.84, 103.249.233.79:21870]
+HTTP GET /api/hospital/addMap/ 200 [1.50, 103.249.233.79:21886]
+WebSocket HANDSHAKING /ws/socket-server [103.249.233.79:21832]
+Exception inside application: No route found for path 'ws/socket-server'.
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 168, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'ws/socket-server'.
+WebSocket DISCONNECT /ws/socket-server [103.249.233.79:21832]
+WebSocket HANDSHAKING /ws/socket-server [103.249.233.79:21917]
+Exception inside application: No route found for path 'ws/socket-server'.
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 168, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'ws/socket-server'.
+WebSocket DISCONNECT /ws/socket-server [103.249.233.79:21917]
+WebSocket HANDSHAKING /ws/socket-server [103.249.233.79:21580]
+Exception inside application: No route found for path 'ws/socket-server'.
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 168, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'ws/socket-server'.
+WebSocket DISCONNECT /ws/socket-server [103.249.233.79:21580]
+WebSocket HANDSHAKING /ws/socket-server [103.249.233.79:21841]
+Exception inside application: No route found for path 'ws/socket-server'.
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 168, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'ws/socket-server'.
+WebSocket DISCONNECT /ws/socket-server [103.249.233.79:21841]
+WebSocket HANDSHAKING /ws/socket-server [103.249.233.79:21758]
+Exception inside application: No route found for path 'ws/socket-server'.
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 168, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'ws/socket-server'.
+WebSocket DISCONNECT /ws/socket-server [103.249.233.79:21758]
+WebSocket HANDSHAKING /ws/socket-server [103.249.233.79:21649]
+Exception inside application: No route found for path 'ws/socket-server'.
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 168, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'ws/socket-server'.
+WebSocket DISCONNECT /ws/socket-server [103.249.233.79:21649]
+HTTP POST /api/user/login/ 200 [1.89, 103.249.233.79:21858]
+Internal Server Error: /api/hospital/testSocket/
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/asgiref/sync.py", line 472, in thread_handler
+    raise exc_info[1]
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/asgiref/sync.py", line 435, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 455, in wait_for
+    return await fut
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/asgiref/sync.py", line 476, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/hospital/views.py", line 67, in post
+    context = {"name" :  request.data['name'], "mobile_no" :request.data['mobile_no']}
+KeyError: 'mobile_no'
+HTTP POST /api/hospital/testSocket/ 500 [1.54, 103.249.233.79:21858]
+Unauthorized: /api/hospital/testSocket/
+HTTP POST /api/hospital/testSocket/ 401 [0.01, 103.249.233.79:21858]
+Internal Server Error: /api/hospital/testSocket/
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/asgiref/sync.py", line 472, in thread_handler
+    raise exc_info[1]
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/asgiref/sync.py", line 435, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 455, in wait_for
+    return await fut
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/asgiref/sync.py", line 476, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/hospital/views.py", line 67, in post
+    context = {"name" :  request.data['name'], "mobile_no" :request.data['mobile_no']}
+KeyError: 'mobile_no'
+HTTP POST /api/hospital/testSocket/ 500 [1.58, 103.249.233.79:21858]
+Method Not Allowed: /api/hospital/testSocket/
+HTTP PUT /api/hospital/testSocket/ 405 [1.51, 103.249.233.79:21858]
+Method Not Allowed: /api/hospital/testSocket/
+HTTP GET /api/hospital/testSocket/ 405 [1.51, 103.249.233.79:21858]
+Internal Server Error: /api/hospital/testSocket/
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/asgiref/sync.py", line 472, in thread_handler
+    raise exc_info[1]
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/asgiref/sync.py", line 435, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 455, in wait_for
+    return await fut
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/asgiref/sync.py", line 476, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/hospital/views.py", line 67, in post
+    context = {"name" :  request.data['name'], "mobile_no" :request.data['mobile_no']}
+KeyError: 'mobile_no'
+HTTP POST /api/hospital/testSocket/ 500 [1.52, 103.249.233.79:21858]
+HTTP POST /api/hospital/testSocket/ 200 [1.50, 103.249.233.79:21858]
+WebSocket HANDSHAKING /ws/socket-server [103.249.233.79:21998]
+Exception inside application: No route found for path 'ws/socket-server'.
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 168, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'ws/socket-server'.
+WebSocket DISCONNECT /ws/socket-server [103.249.233.79:21998]
+WebSocket HANDSHAKING /ws/socket-server [103.249.233.79:21974]
+Exception inside application: No route found for path 'ws/socket-server'.
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 168, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'ws/socket-server'.
+WebSocket DISCONNECT /ws/socket-server [103.249.233.79:21974]
+WebSocket HANDSHAKING /ws/socket-server [103.249.233.79:21748]
+Exception inside application: No route found for path 'ws/socket-server'.
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 168, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'ws/socket-server'.
+WebSocket DISCONNECT /ws/socket-server [103.249.233.79:21748]
+Internal Server Error: /api/hospital/testSocket/
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/asgiref/sync.py", line 472, in thread_handler
+    raise exc_info[1]
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/asgiref/sync.py", line 435, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 455, in wait_for
+    return await fut
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/asgiref/sync.py", line 476, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/hospital/views.py", line 67, in post
+    context = {"name" :  request.data['name'], "mobile_no" :request.data['mobile_no']}
+KeyError: 'mobile_no'
+HTTP POST /api/hospital/testSocket/ 500 [1.54, 103.249.233.79:21656]
+HTTP POST /api/hospital/testSocket/ 200 [1.51, 103.249.233.79:21656]
+HTTP POST /api/hospital/testSocket/ 200 [1.54, 103.249.233.79:21853]
+HTTP POST /api/hospital/testSocket/ 200 [1.51, 103.249.233.79:21853]
+WebSocket HANDSHAKING /ws/socket-server [103.249.233.79:21614]
+Exception inside application: No route found for path 'ws/socket-server'.
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 168, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'ws/socket-server'.
+WebSocket DISCONNECT /ws/socket-server [103.249.233.79:21614]
+WebSocket HANDSHAKING /ws/socket-server [103.249.233.79:21876]
+Exception inside application: No route found for path 'ws/socket-server'.
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 168, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'ws/socket-server'.
+WebSocket DISCONNECT /ws/socket-server [103.249.233.79:21876]
+HTTP POST /api/user/login/ 200 [1.84, 103.249.233.79:21588]
+HTTP GET /api/hospital/addMap/ 200 [1.49, 103.249.233.79:21962]
+HTTP POST /api/user/login/ 200 [1.86, 103.249.233.79:21776]
+HTTP GET /api/hospital/addMap/ 200 [1.49, 103.249.233.79:21714]
+HTTP POST /api/user/login/ 200 [1.82, 103.249.233.79:21922]
+HTTP GET /api/hospital/addMap/ 200 [1.51, 103.249.233.79:21736]
+HTTP GET /admin/ 302 [0.02, 128.14.134.134:39282]
+HTTP POST /api/user/login/ 200 [1.79, 103.249.233.79:21784]
+HTTP GET /api/hospital/addMap/ 200 [1.49, 103.249.233.79:22000]
+HTTP POST /api/user/login/ 200 [1.80, 103.249.233.79:21986]
+HTTP GET /api/hospital/addMap/ 200 [1.51, 103.249.233.79:21996]
+HTTP POST /api/user/login/ 200 [1.87, 103.249.233.79:21716]
+HTTP GET /api/hospital/addMap/ 200 [1.51, 103.249.233.79:21568]
+HTTP POST /api/user/login/ 200 [1.81, 103.249.233.79:22002]
+HTTP GET /api/hospital/addMap/ 200 [1.51, 103.249.233.79:21648]
+HTTP POST /api/user/login/ 200 [1.79, 103.249.233.79:21768]
+HTTP GET /api/hospital/addMap/ 200 [1.51, 103.249.233.79:21858]
+HTTP POST /api/user/login/ 200 [1.80, 103.249.233.79:21966]
+HTTP GET /api/hospital/addMap/ 200 [1.52, 103.249.233.79:21954]
+HTTP POST /api/user/login/ 200 [1.92, 103.249.233.79:21768]
+HTTP GET /api/hospital/addMap/ 200 [1.53, 103.249.233.79:21736]
+HTTP POST /api/user/login/ 200 [1.80, 103.249.233.79:21768]
+HTTP GET /api/hospital/addMap/ 200 [1.51, 103.249.233.79:21830]
+HTTP POST /api/user/login/ 200 [1.79, 103.249.233.79:21996]
+HTTP GET /api/hospital/addMap/ 200 [1.49, 103.249.233.79:22024]
+HTTP POST /api/user/login/ 200 [1.78, 103.249.233.79:21767]
+HTTP GET /api/hospital/addMap/ 200 [1.50, 103.249.233.79:21692]
+HTTP POST /api/user/login/ 200 [1.78, 103.249.233.79:21770]
+HTTP GET /api/hospital/addMap/ 200 [1.49, 103.249.233.79:21843]
+HTTP POST /api/user/login/ 200 [1.80, 103.249.233.79:22024]
+HTTP GET /api/hospital/addMap/ 200 [1.51, 103.249.233.79:21860]
+HTTP POST /api/user/login/ 200 [1.82, 103.249.233.79:21860]
+HTTP GET /api/hospital/addMap/ 200 [1.49, 103.249.233.79:21864]
+HTTP POST /api/user/login/ 200 [1.81, 103.249.233.79:21646]
+HTTP GET /api/hospital/addMap/ 200 [1.51, 103.249.233.79:21678]
+HTTP POST /api/user/login/ 200 [1.79, 103.249.233.79:21820]
+HTTP GET /api/hospital/addMap/ 200 [1.51, 103.249.233.79:21673]
+Not Found: /
+HTTP GET / 404 [0.01, 192.241.204.112:42242]
+Not Found: /
+HTTP GET / 404 [0.01, 183.136.225.9:24283]
+Not Found: /
+HTTP GET / 404 [0.01, 183.136.225.9:24583]
+Not Found: /favicon.ico
+HTTP GET /favicon.ico 404 [0.01, 183.136.225.9:24655]
+Not Found: /robots.txt
+HTTP GET /robots.txt 404 [0.01, 183.136.225.9:25319]
+Not Found: /
+HTTP GET / 404 [0.01, 205.210.31.166:65152]
+Unauthorized: /api/hospital/testSocket/
+HTTP POST /api/hospital/testSocket/ 401 [0.01, 163.53.177.63:52330]
+Not Found: /
+HTTP GET / 404 [0.01, 205.210.31.144:57472]
+WebSocket DISCONNECT /ws/socket-server/ [163.53.177.63:59693]
+Unauthorized: /api/hospital/notification/
+HTTP POST /api/hospital/notification/ 401 [0.01, 163.53.177.63:52362]
+HTTP POST /api/user/login/ 200 [1.91, 163.53.177.63:52362]
+HTTP POST /api/hospital/notification/ 200 [1.51, 163.53.177.63:52362]
+HTTP POST /api/hospital/notification/ 200 [1.54, 163.53.177.63:53010]
+WebSocket HANDSHAKING /ws/socket-notification/ [163.53.177.63:54292]
+Exception inside application: No route found for path 'ws/socket-notification/'.
+Traceback (most recent call last):
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/channels/routing.py", line 168, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'ws/socket-notification/'.
+WebSocket DISCONNECT /ws/socket-notification/ [163.53.177.63:54292]
+Not Found: /
+HTTP GET / 404 [0.01, 65.49.20.85:49475]
