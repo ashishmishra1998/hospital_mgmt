@@ -51,8 +51,13 @@ class MapDetails(APIView):
 class Notification(APIView):
     permission_classes = [IsAuthenticated]
     def post(self, request, format=None):
-        #  serializer = NotificationSerializer(data=request.data)
+        channel_layer = get_channel_layer()
+        context = request.data
         if request.data:
+            async_to_sync(channel_layer.group_send)('notification', {
+            'type': 'chat_message',
+            'message':context
+        })
             return Response({"Message":"Notification Sent!", "data" : request.data})
         return Response({"Message":"Notification Not Sent!"})
 
@@ -76,13 +81,13 @@ class TestSocket(APIView):
 
 # Method and socket
 
-def send(data):
-    channel_layer = get_channel_layer()
-    async_to_sync(channel_layer.group_send)('test', {
-            'type': 'chat_message',
-            'message':data
-        })
-    return HttpResponse("sent")
+# def send(data):
+#     channel_layer = get_channel_layer()
+#     async_to_sync(channel_layer.group_send)('test', {
+#             'type': 'chat_message',
+#             'message':data
+#         })
+#     return HttpResponse("sent")
 
 class addMap(APIView):
     permission_classes = [IsAuthenticated]
