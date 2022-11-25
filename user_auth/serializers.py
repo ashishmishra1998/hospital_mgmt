@@ -33,5 +33,5 @@ class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = User_data
         fields = ['email','first_name','last_name','hospital','role','contact_no']
-
+    
     

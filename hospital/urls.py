@@ -4,7 +4,8 @@ from hospital.views import *
 urlpatterns = [
     path('mapdetails/', MapDetails.as_view(), name='mapdetails'),
     path('addMap/', addMap.as_view(), name='addMap'),
-    path('notification/', Notification.as_view(), name='notification'),
+    path('notification/', NotificationData.as_view(), name='notification'),
+    path('notificationhistory/', NotificationHistory.as_view(), name='notificationhistory'),
     path('testSocket/', TestSocket.as_view(), name='testSocket'),
     path('addHospital/', addHospital.as_view(), name='addHospital'),
     path('allHospital/', allHospital.as_view(), name='allHospital'),

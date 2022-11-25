@@ -61,6 +61,7 @@ class User_data(AbstractBaseUser):
     ("nurse", "nurse"),
 ]
     role = models.CharField(max_length=6,choices=Roles)
+    card_serial = models.CharField(max_length=10, null=False)
     contact_no = models.CharField(max_length=12)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)

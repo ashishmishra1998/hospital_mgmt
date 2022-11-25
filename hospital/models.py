@@ -29,6 +29,13 @@ class BedData(models.Model):
     ward_id =  models.ForeignKey(WardData, on_delete=models.SET_NULL, null=True)
     hospital_id = models.ForeignKey(HospitalData, on_delete=models.CASCADE)
 
+class Notification(models.Model):
+    event = models.CharField(max_length=25)
+    type = models.CharField(max_length=30)
+    serial = models.CharField(max_length=40)
+    time = models.DateTimeField(null=True, blank=True)
+    card_serial = models.CharField(max_length=20)
+
 
     
 
