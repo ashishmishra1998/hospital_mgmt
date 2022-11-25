@@ -90,7 +90,7 @@ DATABASES = {
     'ENGINE': 'django.db.backends.postgresql',
     'NAME': 'plgfhmkv',
     'USER':'plgfhmkv',
-    'PASSWORD':'7bl8t6V1qFJpG9UENz_6WC2Re-xXAcn9', 
+    'PASSWORD':'7bl8t6V1qFJpG9UENz_6WC2Re-xXAcn9',
     'HOST':'peanut.db.elephantsql.com',
     'PORT': 5432
     }}
