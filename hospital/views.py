@@ -11,6 +11,7 @@ from rest_framework.permissions import IsAuthenticated
 from user_auth.renderers import UserRenderer
 from channels.layers import get_channel_layer
 from asgiref.sync import async_to_sync
+from .models import *
 import json
 from django.http import HttpResponse
 from .consumers import NotificationConsumer
@@ -48,19 +49,58 @@ class MapDetails(APIView):
         }
         return Response({'name':'Nurster','address':'Ahmedabad','contact':'1234512345','map':map})
 
-class Notification(APIView):
+class NotificationData(APIView):
     permission_classes = [IsAuthenticated]
     def post(self, request, format=None):
         channel_layer = get_channel_layer()
         context = request.data
-        if request.data:
-            async_to_sync(channel_layer.group_send)('notification', {
-            'type': 'chat_message',
-            'message':context
-        })
+        event_data = context.get('events')
+        for i in event_data:
+            event = i['event']
+            type =  i['type']
+            serial = i['serial']
+            time =  i['time']
+            card_serial = i['card_serial']
+            if Notification.objects.filter(serial = serial).exists():
+                notificationobj = Notification.objects.filter(serial = serial).last()
+                bed_no = BedData.objects.get(remote = serial)
+                floor = bed_no.floor
+                bed_id = bed_no.id
+                bed_desc = bed_no.bed_desc
+                ward_data = bed_no.ward_id
+                ward_name =  ward_data.ward_name
+                ward_desc = ward_data.ward_desc
+                ward_id = ward_data.id
+                details = {"card_serial":card_serial,"event":event,"serial":serial,"floor":floor,"bed_id":bed_id,"bed_desc":bed_desc,"ward_name":ward_name,"ward_desc":ward_desc,"ward_id":ward_id}
+                if notificationobj.card_serial == "": 
+                    notificationobj.card_serial = card_serial
+                    notificationobj.save()
+                    async_to_sync(channel_layer.group_send)('notification', {
+                    'type': 'chat_message',
+                    'message':details
+                    })
+                else:
+                    data = Notification.objects.create(event = event, type = type, serial = serial, time = time, card_serial = card_serial)
+                    data.save()
+                    async_to_sync(channel_layer.group_send)('notification', {
+                    'type': 'chat_message',
+                    'message':details
+                    })
+            else:
+                data = Notification.objects.create(event = event, type = type, serial = serial, time = time, card_serial = card_serial)
+                data.save()   
+                async_to_sync(channel_layer.group_send)('notification', {
+                    'type': 'chat_message',
+                    'message':details
+                    })
             return Response({"Message":"Notification Sent!", "data" : request.data})
         return Response({"Message":"Notification Not Sent!"})
 
+class NotificationHistory(ListAPIView):
+    serializer_class = NotificationHistory
+    permission_classes = [IsAuthenticated]
+    def get_queryset(self):
+        return Notification.objects.all().order_by('-id')[:10]
 
 
 class TestSocket(APIView):
@@ -195,6 +235,13 @@ class accessSingleHospitalBeds(RetrieveUpdateDestroyAPIView):
     def get_queryset(self):
         return BedData.objects.filter(id =  int(self.kwargs['pk']))
 
+# class Notification(CreateAPIView):
+#     # serializer_class = AddNotifications
+#     permission_classes = [IsAuthenticated]
+#     def perform_create(self, serializer):
+#         obj = serializer.save()
+#         obj.created_by = self.request.user
+#         obj.save()
 
 
 class hospitalDetails(RetrieveAPIView):

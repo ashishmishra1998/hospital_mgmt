@@ -50,14 +50,24 @@ class AddBed(serializers.ModelSerializer):
         fields="__all__"
 
     def to_representation(self, instance):
-        print(instance)
         response = super().to_representation(instance)
         response['hospital_id'] = {
         'id':instance.hospital_id.pk,
         'name':instance.hospital_id.name
         }
         return response
+
+class NotificationHistory(serializers.ModelSerializer):
+    class Meta:
+        model = Notification
+        fields="__all__"
+
     
+# class AddNotifications(serializers.ModelSerializer):
+#     class Meta:
+#         model = Notification
+#         fields="__all__"
+
 class HospitalDetails(serializers.ModelSerializer):
     class Meta:
         model = HospitalData
@@ -113,4 +123,7 @@ class HospitalDetails(serializers.ModelSerializer):
                 }
         
         return response
+
+
+
     
