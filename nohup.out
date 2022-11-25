@@ -2994,3 +2994,151 @@ LINE 1: SELECT 1 AS "a" FROM "hospital_notification" WHERE "hospital...
                              ^
 
 HTTP POST /api/hospital/notification/ 500 [2.85, 163.53.177.63:53791]
+/home/ubuntu/env_hospital/hospital_mgmt/hospital_mgmt/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 25, 2022 - 07:17:21
+Django version 4.1.2, using settings 'hospital_mgmt.settings'
+Starting ASGI/Channels version 3.0.4 development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 446, in execute_from_command_line
+    utility.execute()
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 386, in execute
+    settings.INSTALLED_APPS
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/conf/__init__.py", line 92, in __getattr__
+    self._setup(name)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/conf/__init__.py", line 79, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/conf/__init__.py", line 190, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 844, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 981, in get_code
+  File "<frozen importlib._bootstrap_external>", line 911, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/env_hospital/hospital_mgmt/hospital_mgmt/settings.py", line 88
+    <<<<<<< HEAD
+    ^
+SyntaxError: invalid syntax
+/home/ubuntu/env_hospital/hospital_mgmt/hospital_mgmt/settings.py changed, reloading.
+/home/ubuntu/env_hospital/hospital_mgmt/hospital_mgmt/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 25, 2022 - 07:17:20
+Django version 4.1.2, using settings 'hospital_mgmt.settings'
+Starting ASGI/Channels version 3.0.4 development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 25, 2022 - 07:17:20
+Django version 4.1.2, using settings 'hospital_mgmt.settings'
+Starting ASGI/Channels version 3.0.4 development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+/home/ubuntu/env_hospital/hospital_mgmt/hospital_mgmt/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 25, 2022 - 07:17:20
+Django version 4.1.2, using settings 'hospital_mgmt.settings'
+Starting ASGI/Channels version 3.0.4 development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 446, in execute_from_command_line
+    utility.execute()
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 386, in execute
+    settings.INSTALLED_APPS
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/conf/__init__.py", line 92, in __getattr__
+    self._setup(name)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/conf/__init__.py", line 79, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/conf/__init__.py", line 190, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 844, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 981, in get_code
+  File "<frozen importlib._bootstrap_external>", line 911, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/env_hospital/hospital_mgmt/hospital_mgmt/settings.py", line 88
+    <<<<<<< HEAD
+    ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 446, in execute_from_command_line
+    utility.execute()
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 386, in execute
+    settings.INSTALLED_APPS
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/conf/__init__.py", line 92, in __getattr__
+    self._setup(name)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/conf/__init__.py", line 79, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/conf/__init__.py", line 190, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 844, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 981, in get_code
+  File "<frozen importlib._bootstrap_external>", line 911, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/env_hospital/hospital_mgmt/hospital_mgmt/settings.py", line 88
+    <<<<<<< HEAD
+    ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 446, in execute_from_command_line
+    utility.execute()
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 386, in execute
+    settings.INSTALLED_APPS
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/conf/__init__.py", line 92, in __getattr__
+    self._setup(name)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/conf/__init__.py", line 79, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/ubuntu/env_hospital/hospital_mgmt/venv/lib/python3.8/site-packages/django/conf/__init__.py", line 190, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 844, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 981, in get_code
+  File "<frozen importlib._bootstrap_external>", line 911, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ubuntu/env_hospital/hospital_mgmt/hospital_mgmt/settings.py", line 88
+    <<<<<<< HEAD
+    ^
+SyntaxError: invalid syntax

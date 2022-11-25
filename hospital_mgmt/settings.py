@@ -85,15 +85,15 @@ ASGI_APPLICATION = "hospital_mgmt.asgi.application"
 
 
 
-DATABASES = {
-'default': {
-    'ENGINE': 'django.db.backends.postgresql',
-    'NAME': 'plgfhmkv',
-    'USER':'plgfhmkv',
-    'PASSWORD':'7bl8t6V1qFJpG9UENz_6WC2Re-xXAcn9',
-    'HOST':'peanut.db.elephantsql.com',
-    'PORT': 5432
-    }}
+# DATABASES = {
+# 'default': {
+#     'ENGINE': 'django.db.backends.postgresql',
+#     'NAME': 'plgfhmkv',
+#     'USER':'plgfhmkv',
+#     'PASSWORD':'7bl8t6V1qFJpG9UENz_6WC2Re-xXAcn9', 
+#     'HOST':'peanut.db.elephantsql.com',
+#     'PORT': 5432
+#     }}
 
 # DATABASES = {
 #     'default': {
@@ -101,7 +101,16 @@ DATABASES = {
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-
+DATABASES = {
+ 'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'hospital-mgmt',                
+        'USER': 'postgres',                      
+        'PASSWORD': 'hospital-mgmt@123',        
+        'HOST': '13.234.117.5',                      
+        'PORT': '5432',                     
+    }
+}
 
 AUTH_USER_MODEL = 'user_auth.User_data'
 
