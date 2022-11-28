@@ -77,38 +77,41 @@ class NotificationData(APIView):
             serial = i['serial']
             time =  i['time']
             card_serial = i['card_serial']
-            if Notification.objects.filter(serial = serial).exists():
-                notificationobj = Notification.objects.filter(serial = serial).last()
-                bed_no = BedData.objects.get(remote = serial)
-                floor = bed_no.floor
-                bed_id = bed_no.id
-                bed_desc = bed_no.bed_desc
-                ward_data = bed_no.ward_id
-                ward_name =  ward_data.ward_name
-                ward_desc = ward_data.ward_desc
-                ward_id = ward_data.id
-                details = {"card_serial":card_serial,"event":event,"serial":serial,"floor":floor,"bed_id":bed_id,"bed_desc":bed_desc,"ward_name":ward_name,"ward_desc":ward_desc,"ward_id":ward_id}
-                if notificationobj.card_serial == "": 
-                    notificationobj.card_serial = card_serial
-                    notificationobj.save()
-                    async_to_sync(channel_layer.group_send)('notification', {
-                    'type': 'chat_message',
-                    'message':details
-                    })
+            try:
+                if Notification.objects.filter(serial = serial).exists():
+                    notificationobj = Notification.objects.filter(serial = serial).last()
+                    bed_no = BedData.objects.get(remote = serial)
+                    floor = bed_no.floor
+                    bed_id = bed_no.id
+                    bed_desc = bed_no.bed_desc
+                    ward_data = bed_no.ward_id
+                    ward_name =  ward_data.ward_name
+                    ward_desc = ward_data.ward_desc
+                    ward_id = ward_data.id
+                    details = {"card_serial":card_serial,"event":event,"serial":serial,"floor":floor,"bed_id":bed_id,"bed_desc":bed_desc,"ward_name":ward_name,"ward_desc":ward_desc,"ward_id":ward_id}
+                    if notificationobj.card_serial == "": 
+                        notificationobj.card_serial = card_serial
+                        notificationobj.save()
+                        async_to_sync(channel_layer.group_send)('notification', {
+                        'type': 'chat_message',
+                        'message':details
+                        })
+                    else:
+                        data = Notification.objects.create(event = event, type = type, serial = serial, time = time, card_serial = card_serial)
+                        data.save()
+                        async_to_sync(channel_layer.group_send)('notification', {
+                        'type': 'chat_message',
+                        'message':details
+                        })
                 else:
                     data = Notification.objects.create(event = event, type = type, serial = serial, time = time, card_serial = card_serial)
-                    data.save()
+                    data.save()   
                     async_to_sync(channel_layer.group_send)('notification', {
-                    'type': 'chat_message',
-                    'message':details
-                    })
-            else:
-                data = Notification.objects.create(event = event, type = type, serial = serial, time = time, card_serial = card_serial)
-                data.save()   
-                async_to_sync(channel_layer.group_send)('notification', {
-                    'type': 'chat_message',
-                    'message':details
-                    })
+                        'type': 'chat_message',
+                        'message':details
+                        })
+            except:
+                return Response({"Message":"Please check you have entered valid bed serial."})        
             return Response({"Message":"Notification Sent!", "data" : request.data})
         return Response({"Message":"Notification Not Sent!"})
 
