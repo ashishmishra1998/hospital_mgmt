@@ -24,29 +24,45 @@ from .consumers import NotificationConsumer
 class MapDetails(APIView):
     permission_classes = [IsAuthenticated]
     def get(self, request, format = None):
-        map = {"map":    {
-    "gateway":{"serial":"GATE001"},
-    "total_floors":2,
-    "floors":[    {"name":"ground","total_rooms":2,
-        "rooms":[    {"name":"room1","total_beds":2,"leds":{"serial":"LED001"},
-            "beds":[    {"name":"bed1","remote":{"serial":"RMT001"}},
-                {"name":"bed2","remote":{"serial":"RMT002"}}]},
-            {"name":"room2","total_beds":2,"leds":{"serial":"LED002"},
-            "beds":[    {"name":"bed1","remote":{"serial":"RMT003"}},
-                {"name":"bed2","remote":{"serial":"RMT004"}},
-                {"name":"bed3","remote":{"serial":"RMT009"}}]
-            }]},
-        {"name":"1st","total_rooms":2,
-        "rooms":[{"name":"room1","total_beds":2,"leds":{"serial":"LED003"},
-            "beds":[    {"name":"bed1","remote":{"serial":"RMT005"}},
-                {"name":"bed2","remote":{"serial":"RMT006"}}]},
-            {"name":"room2","total_beds":2,"leds":{"serial":"LED004"},
-            "beds":[    {"name":"bed1","remote":{"serial":"RMT007"}},
-                {"name":"bed2","remote":{"serial":"RMT008"}}]
-            }]
-        }]
-    }
+        map = {
+    "map": {
+        "name": "Nurster",
+        "address": "Ahmedabad",
+        "contact": "1234512345",
+        "map": {
+            "total_floors": 1,
+            "floors": [
+                {
+                    "name": "ground",
+                    "total_wards": 1,
+                    "wards": [
+                        {
+                            "name": "ward1",
+                            "total_beds": 2,
+                            "leds": {
+                                "serial": "RL1000001"
+                            },
+                            "beds": [
+                                {
+                                    "name": "bed1",
+                                    "remote": {
+                                        "serial": "RM1000001"
+                                    }
+                                },
+                                {
+                                    "name": "bed2",
+                                    "remote": {
+                                        "serial": "RM1000002"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
+    }
+}
         return Response({'name':'Nurster','address':'Ahmedabad','contact':'1234512345','map':map})
 
 class NotificationData(APIView):
