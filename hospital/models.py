@@ -34,7 +34,7 @@ class Notification(models.Model):
     type = models.CharField(max_length=30)
     serial = models.CharField(max_length=40)
     time = models.DateTimeField(null=True, blank=True)
-    card_serial = models.CharField(max_length=20,null=True) 
+    card_serial = models.CharField(max_length=20,null=True)  
 
 
     

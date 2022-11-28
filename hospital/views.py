@@ -62,7 +62,7 @@ class MapDetails(APIView):
             ]
         }
     }
-}
+}  
         return Response({'name':'Nurster','address':'Ahmedabad','contact':'1234512345','map':map})
 
 class NotificationData(APIView):
