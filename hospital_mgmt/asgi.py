@@ -22,13 +22,13 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hospital_mgmt.settings')
 
 django.setup()
 
-# application = ProtocolTypeRouter({
-#     'http':get_asgi_application(),
-#     'websocket':AuthMiddlewareStack(
-#         URLRouter(
-#             hospital.routing.websocket_urlpatterns
-#         )
-#     )
-# })
+application = ProtocolTypeRouter({
+    'http':get_default_application(),
+    'websocket':AuthMiddlewareStack(
+        URLRouter(
+            hospital.routing.websocket_urlpatterns
+        )
+    )
+})
 
 application = get_default_application()
