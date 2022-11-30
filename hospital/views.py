@@ -15,6 +15,7 @@ from .models import *
 import json
 from django.http import HttpResponse
 from .consumers import NotificationConsumer
+from django.http import JsonResponse
 
 # Create your views here.
 
@@ -63,7 +64,7 @@ class MapDetails(APIView):
         }
     }
 }  
-        return Response({'name':'Nurster','address':'Ahmedabad','contact':'1234512345','map':map})
+        return Response(map)
 
 class NotificationData(APIView):
     permission_classes = [IsAuthenticated]
@@ -138,15 +139,15 @@ class TestSocket(APIView):
             return Response({"Message":"Socket Connected and data sent!", "context" : context })
         return Response({"Message":"Socket Not Connected!"})
 
-# Method and socket
 
-# def send(data):
-#     channel_layer = get_channel_layer()
-#     async_to_sync(channel_layer.group_send)('test', {
-#             'type': 'chat_message',
-#             'message':data
-#         })
-#     return HttpResponse("sent")
+
+def send(data):
+    channel_layer = get_channel_layer()
+    async_to_sync(channel_layer.group_send)('test', {
+            'type': 'chat_message',
+            'message':data
+        })
+    return HttpResponse("sent")
 
 class addMap(APIView):
     permission_classes = [IsAuthenticated]
@@ -203,9 +204,27 @@ class accessSingleHospitalFloors(RetrieveUpdateDestroyAPIView):
     serializer_class = AddFloor
     permission_classes = [IsAuthenticated]
 
+    lookup_field ='hospital_id'
+    def get_queryset(self):
+        return FloorData.objects.filter(hospital_id__pk =  int(self.kwargs['hospital_id']))
+
+# class accessSingleHospitalFloors(RetrieveUpdateDestroyAPIView):
+#     serializer_class = AddFloor
+#     permission_classes = [IsAuthenticated]
+
+#     lookup_field ='hospital_id'
+#     def get_queryset(self):
+#         return FloorData.objects.filter(hospital_id__pk =  int(self.kwargs['hospital_id']))
+
+class accessSingleHospital(RetrieveUpdateDestroyAPIView):
+    serializer_class = AddHospital
+    permission_classes = [IsAuthenticated]
+
     lookup_field ='pk'
     def get_queryset(self):
-        return FloorData.objects.filter(id =  int(self.kwargs['pk']))
+        return HospitalData.objects.filter(id =  int(self.kwargs['pk']))
+
+
 
 class addWard(CreateAPIView):
     serializer_class = AddWard
