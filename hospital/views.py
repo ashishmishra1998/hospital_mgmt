@@ -26,7 +26,6 @@ class MapDetails(APIView):
     permission_classes = [IsAuthenticated]
     def get(self, request, format = None):
         map = {
-    "map": {
         "name": "Nurster",
         "address": "Ahmedabad",
         "contact": "1234512345",
@@ -63,7 +62,6 @@ class MapDetails(APIView):
             ]
         }
     }
-}  
         return Response(map)
 
 class NotificationData(APIView):
