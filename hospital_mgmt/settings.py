@@ -132,8 +132,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-CORS_ALLOW_ALL_ORIGINS = True 
+CORS_ORIGIN_WHITELIST=["https://app.nurster.com","http://localhost:3000", "http://app.nurster.com"]
+# CORS_ALLOW_ALL_ORIGINS = True 
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
