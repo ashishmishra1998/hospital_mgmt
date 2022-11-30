@@ -87,7 +87,7 @@ class NotificationData(APIView):
                     ward_name =  ward_data.ward_name
                     ward_desc = ward_data.ward_desc
                     ward_id = ward_data.id
-                    details = {"card_serial":card_serial,"event":event,"serial":serial,"floor":floor,"bed_id":bed_id,"bed_desc":bed_desc,"ward_name":ward_name,"ward_desc":ward_desc,"ward_id":ward_id}
+                    details = {"card_serial":card_serial,"event":event,"time": time,"serial":serial,"floor":floor,"bed_id":bed_id,"bed_desc":bed_desc,"ward_name":ward_name,"ward_desc":ward_desc,"ward_id":ward_id}
                     if notificationobj.card_serial == "": 
                         notificationobj.card_serial = card_serial
                         notificationobj.save()

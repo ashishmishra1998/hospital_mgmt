@@ -22,7 +22,7 @@ class AddFloor(serializers.ModelSerializer):
         fields="__all__"
 
     def to_representation(self, instance):
-        print(instance)
+        
         response = super().to_representation(instance)
         response['hospital_id'] = {
         'id':instance.hospital_id.pk,
