@@ -103,7 +103,7 @@ ASGI_APPLICATION = "hospital_mgmt.asgi.application"
 DATABASES = {
  'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hospital-mgmt',                
+        'NAME': 'hospitalmgmt',                
         'USER': 'postgres',                      
         'PASSWORD': 'hospital-mgmt@123',        
         'HOST': '13.234.117.5',                      

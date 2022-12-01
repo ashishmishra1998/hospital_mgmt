@@ -12,6 +12,7 @@ from user_auth.renderers import UserRenderer
 from channels.layers import get_channel_layer
 from asgiref.sync import async_to_sync
 from .models import *
+from user_auth.models import *
 import json
 from django.http import HttpResponse
 from .consumers import NotificationConsumer
@@ -109,11 +110,32 @@ class NotificationData(APIView):
         return Response({"Message":"Notification Sent!", "data" : request.data,"status" : "success"})
         # return Response({"Message":"Notification Not Sent!"})
 
-class NotificationHistory(ListAPIView):
-    serializer_class = NotificationHistory
+class NotificationHistory(APIView):
     permission_classes = [IsAuthenticated]
-    def get_queryset(self):
-        return Notification.objects.all().order_by('-id')[:10]
+    def get(self, request):
+        resp = []
+        data = Notification.objects.filter(card_serial__isnull = False).order_by('-id')[:10]
+        print(data)
+        for notificationobj in data:
+            print(notificationobj.card_serial)
+            print(notificationobj.serial)
+            try:
+                bed_no = BedData.objects.get(remote = notificationobj.serial)
+                user_obj = User_data.objects.filter(card_serial = notificationobj.card_serial).last()
+                user_name = user_obj.first_name + " " + user_obj.last_name
+                floor = bed_no.floor
+                bed_id = bed_no.id
+                bed_desc = bed_no.bed_desc
+                ward_data = bed_no.ward_id
+                ward_name =  ward_data.ward_name
+                ward_desc = ward_data.ward_desc
+                ward_id = ward_data.id
+                details = {"card_serial":notificationobj.card_serial,"event":notificationobj.event,"time": notificationobj.time,"serial":notificationobj.serial,"floor":floor,"bed_id":bed_id,"bed_desc":bed_desc,"ward_name":ward_name,"ward_desc":ward_desc,"ward_id":ward_id,"attendent_by":user_name}
+                resp.append(details)
+            except Exception as e:
+                print(e)
+
+        return Response(resp)
 
 
 class TestSocket(APIView):
