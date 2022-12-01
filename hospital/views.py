@@ -91,7 +91,6 @@ class NotificationData(APIView):
                     ward_desc = ward_data.ward_desc
                     ward_id = ward_data.id
                     details = {"card_serial":card_serial,"event":event,"time": time,"serial":serial,"floor":floor,"bed_id":bed_id,"bed_desc":bed_desc,"ward_name":ward_name,"ward_desc":ward_desc,"ward_id":ward_id}
-                    all_details.append(details)
                     if notificationobj.card_serial == "": 
                         notificationobj.card_serial = card_serial
                         user_obj = User_data.objects.filter(card_serial = card_serial).last()
@@ -100,6 +99,8 @@ class NotificationData(APIView):
                     else:
                         data = Notification.objects.create(event = event, type = type, serial = serial, time = time, card_serial = card_serial)
                         data.save()
+
+                    all_details.append(details)
                 else:
                     data = Notification.objects.create(event = event, type = type, serial = serial, time = time, card_serial = card_serial)
                     data.save()
